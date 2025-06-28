@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <link rel="stylesheet" href="style/reset.css">
+   <link rel="stylesheet" href="style/fonts.css">
+   <link rel="stylesheet" href="style/../css/style.css">
+   <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+   <title>Botspace</title>
+</head>
+
+<body>
+   <div class="overlay"></div>
+   <div class="wrapper">
+      <div id="cursor" class="cursor"></div>
+      <header class="header">
+         <div class="header__top">
+            <nav class="header-top__nav">
+               <ul class="header-top__nav-list">
+                  <li class="header-top__nav-item">
+                     <a href="#" class="header-top__nav-link">Главная</a>
+                  </li>
+                  <li class="header-top__nav-item">
+                     <a href="#" class="header-top__nav-link">Возможности</a>
+                  </li>
+                  <li class="header-top__nav-item">
+                     <a href="#" class="header-top__nav-link">Интеграции</a>
+                  </li>
+                  <li class="header-top__nav-item">
+                     <a href="#" class="header-top__nav-link">Тарифы</a>
+                  </li>
+               </ul>
+            </nav>
+         </div>
+         <div class="header-main">
+            <div class="header-main__img">
+               <img src="img/main-planet.png" alt="decor">
+            </div>
+            <div class="header-main__text-wrapper">
+               <h1 class="header-main__title">BO<span>TSPA</span>CE</h1>
+               <div class="header-main__text">конструктор ботов в Telegram </div>
+            </div>
+            <div class="header-main__buttons">
+               <button type="submit" class="header-main__sign btn">Регистрация</button>
+               <button type="submit" class="header-main__log btn">Войти</button>
+            </div>
+            <div class="form-wrapper">
+               <form method="post" class="header-main__form header-main__form-sign">
+                  <label for="main-input__name" class="main-label__name">Your name:</label>
+                  <input required id="main-input__name" type="text" class="header-form__input header-form__input-name">
+                  <label for="main-input__mail" class="main-label__email">Email:</label>
+                  <input required id="main-input__mail" type="email" class="header-form__input header-form__input-mail">
+                  <label for="main-input__phone" class="main-label__phone">Phone</label>
+                  <input required id="main-input__phone" type="tel" class="header-form__input header-form__input-phone">
+                  <label for="main-input__pass" class="main-label__pass">Password</label>
+                  <input required id="main-input__pass" type="password"
+                     class="header-form__input header-form__input-pass">
+                  <button type="submit" class="header-main__sign-confirm btn">Confirm</button>
+               </form>
+               <form method="get" class="header-main__form header-main__form-log">
+                  <label for="main-input__username" class="main-label__name">Username:</label>
+                  <input required id="main-input__username" type="text"
+                     class="header-form__input header-form__input-name">
+                  <label for="main-input__password" class="main-label__pass">Password</label>
+                  <input required id="main-input__password" type="password"
+                     class="header-form__input header-form__input-pass">
+                  <button type="submit" class="header-main__sign-confirm btn">Confirm</button>
+               </form>
+            </div>
+         </div>
+      </header>
+      <main class="main">
+         <div class="container">
+            <div class="main-info">
+               <div class="main-info__left">
+                  <div class="main-info__text">
+                     <div class="main-info__text-top"><span>BOTSPACE</span><span> — это инновационная</span></div>
+                     <div class="main-info__text-bot">платформа для создания Telegram-ботов, которая позволяет каждому,
+                        от новичков до профессионалов, легко и быстро разрабатывать ботов для автоматизации бизнеса и
+                        общения с клиентами.<br>Наш конструктор — это не просто инструмент, а целая экосистема для
+                        реализации ваших идей без навыков программирования.</div>
+                  </div>
+                  <button type="submit" class="main-info__left-btn btn">Получить демо доступ на 7 дней</button>
+               </div>
+               <div class="main-info__right">
+                  <div class="main-info__right-img">
+                     <img src="img/main-decor.png" alt="decor">
+                  </div>
+               </div>
+            </div>
+            <div class="main-opportunities">
+               <div class="main-opportunities__left">
+                  <div class="main-opportunities__left-img">
+                     <img src="img/astro.png" alt="decor">
+                  </div>
+               </div>
+               <div class="main-opportunities__right">
+                  <h2 class="main-opportunities__title">Возможности</h2>
+                  <ul class="main-opportunities__right-list">
+                     <li class="main-opportunities__right-item">
+                        <div class="main-opportunities__right-title"><span>-</span>Модерация чатов</div>
+                        <div class="main-opportunities__right-text">Автоматически очищайте чаты от мата, спама и
+                           нежелательного контента, обеспечивая комфортное общение для ваших пользователей.</div>
+                     </li>
+                     <li class="main-opportunities__right-item">
+                        <div class="main-opportunities__right-title"><span>-</span>Продажа товаров и услуг</div>
+                        <div class="main-opportunities__right-text">Создавайте удобные витрины, корзины и системы оплаты
+                           прямо в Telegram, чтобы продавать без лишних сложностей.</div>
+                     </li>
+                     <li class="main-opportunities__right-item">
+                        <div class="main-opportunities__right-title"><span>-</span>Реферальная программа</div>
+                        <div class="main-opportunities__right-text">Запускайте программы лояльности, мотивирующие
+                           пользователей приглашать друзей и получать бонусы.</div>
+                     </li>
+                     <li class="main-opportunities__right-item">
+                        <div class="main-opportunities__right-title"><span>-</span>Проведение розыгрышей</div>
+                        <div class="main-opportunities__right-text">Организуйте конкурсы и розыгрыши, чтобы повысить
+                           вовлеченность аудитории и привлечь новых подписчиков.</div>
+                     </li>
+                     <li class="main-opportunities__right-item">
+                        <div class="main-opportunities__right-title"><span>-</span>Интеграция с ИИ и сервисами</div>
+                        <div class="main-opportunities__right-text">Подключайте искусственный интеллект для умных
+                           диалогов и интегрируйте бота с CRM для обработки новых заявок, упрощая взаимодействие с
+                           клиентами и ускоряя обработку запросов.</div>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+         <div class="main-integr">
+            <div class="container">
+               <h2 class="main-integr__title">Интеграции</h2>
+               <div class="main-integr__text">
+                  <span>BOTSPACE — </span>это универсальный конструктор Telegram-ботов, который поддерживает глубокую
+                  интеграцию с ведущими платежными системами, CRM и облачными сервисами.
+
+                  <br>
+                  <br>
+                  Наша платформа позволяет автоматизировать бизнес-процессы, упрощать взаимодействие с клиентами и
+                  эффективно управлять данными. Ниже описаны возможности интеграции с указанными сервисами.
+               </div>
+            </div>
+         </div>
+         <div class="main-astro">
+            <div class="container">
+               <div class="main-astro__inner">
+                  <div class="main-astro__char">
+                     <img src="img/astro-2.png" alt="decor">
+                  </div>
+                  <div class="main-astro__planet-wrapper">
+                     <div class="main-astro__planet-img">
+                        <img src="img/planet-amocrm.png" alt="decor">
+                        <div class="main-astro__planet-logo">
+                           <img src="img/amocrm.svg" alt="decor">
+                        </div>
+                     </div>
+                  </div>
+                  <div class="main-astro__planet-wrapper">
+                     <div class="main-astro__planet-img">
+                        <img src="img/planet-umoney.png" alt="decor">
+                        <div class="main-astro__planet-logo">
+                           <img src="img/umoney.svg" alt="decor">
+                        </div>
+                     </div>
+                  </div>
+                  <div class="main-astro__planet-wrapper">
+                     <div class="main-astro__planet-img">
+                        <img src="img/planet-disk.png" alt="decor">
+                        <div class="main-astro__planet-logo">
+                           <img src="img/Google_Drive.svg" alt="decor">
+                        </div>
+                     </div>
+                  </div>
+                  <div class="main-astro__planet-wrapper">
+                     <div class="main-astro__planet-img">
+                        <img src="img/planet-tinkoff.png" alt="decor">
+                        <div class="main-astro__planet-logo">
+                           <img src="img/t_bank.svg" alt="decor">
+                        </div>
+                     </div>
+                  </div>
+                  <div class="main-astro__planet-wrapper">
+                     <div class="main-astro__planet-img">
+                        <img src="img/planet-bitrix.png" alt="decor">
+                        <div class="main-astro__planet-logo">
+                           <img src="img/bitrix.svg" alt="decor">
+                        </div>
+                     </div>
+                  </div>
+                  <div class="main-astro__planet-wrapper">
+                     <div class="main-astro__planet-img">
+                        <img src="img/planet-prodamus.png" alt="decor">
+                        <div class="main-astro__planet-logo">
+                           <img src="img/prodamus.svg" alt="decor">
+                        </div>
+                     </div>
+                  </div>
+                  <div class="main-astro__planet-wrapper">
+                     <div class="main-astro__planet-img">
+                        <img src="img/planet-excel.png" alt="decor">
+                        <div class="main-astro__planet-logo">
+                           <img src="img/excel.svg" alt="decor">
+                        </div>
+                     </div>
+                  </div>
+                  <div class="main-astro__planet-wrapper">
+                     <div class="main-astro__planet-img">
+                        <img src="img/planet-vkassa.png" alt="decor">
+                        <div class="main-astro__planet-logo">
+                           <img src="img/ukassa.svg" alt="decor">
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="main-limit">
+            <div class="container">
+               <h2 class="main-limit__title">Безлимитные тарифы</h2>
+               <div class="main-limit__text">
+                  мы знаем, как лимитированные тарифы мешают развитию любого проекта, когда ваш бот упирается в
+                  потолок по количеству пользователей или функционала. это тормозит рост и мешает реализовать ваши
+                  идеи.<br><br>
+                  С BotSpace вы можете сосредоточиться на развитии,
+                  а не на подсчете пользователей или функций. Дайте своему боту свободу, которую он заслуживает!
+                  Попробуйте безлимитный тариф BotSpace уже сегодня
+                  и забудьте про ограничения!
+               </div>
+               <div class="main-limit__img">
+                  <img src="img/decor-infinite.svg" alt="decor">
+               </div>
+            </div>
+         </div>
+         <div class="main-plan">
+            <div class="container">
+               <div class="main-plan__inner">
+                  <div class="main-plan__item">
+                     <div class="main-plan__item-price">
+                        1290₽</div>
+                     <div class="main-plan__item-text">30 дней безлимита</div>
+                     <div class="main-plan__item-description">Без дополнительных платежей
+                        за основой функционал конструктора</div>
+                  </div>
+                  <div class="main-plan__item">
+                     <div class="main-plan__item-price">
+                        3450₽</div>
+                     <div class="main-plan__item-text">90 дней безлимита</div>
+                     <div class="main-plan__item-description">Без дополнительных платежей
+                        за основой функционал конструктора</div>
+                  </div>
+                  <div class="main-plan__item">
+                     <div class="main-plan__item-price">
+                        6300₽</div>
+                     <div class="main-plan__item-text">180 дней безлимита</div>
+                     <div class="main-plan__item-description">Без дополнительных платежей
+                        за основой функционал конструктора</div>
+                  </div>
+                  <div class="main-plan__item">
+                     <div class="main-plan__item-price">
+                        11880₽</div>
+                     <div class="main-plan__item-text">360 дней безлимита</div>
+                     <div class="main-plan__item-description">Без дополнительных платежей
+                        за основой функционал конструктора</div>
+                  </div>
+               </div>
+               <button type="submit" class="main-plan__button btn">Получить демо доступ на 7 дней</button>
+            </div>
+         </div>
+      </main>
+      <footer class="footer">
+         <div class="container">
+            <div class="footer-inner">
+               <div class="footer-main">
+                  <div class="footer-main__logo">
+                     <img src="img/logo.svg" alt="logo">
+                  </div>
+                  <ul class="footer-main__list footer-main__list-1">
+                     <li class="footer-main__item"><a class="footer-main__link" href="#">Telegram Канал</a></li>
+                     <li class="footer-main__item"><a class="footer-main__link" href="#">Telegram Чат</a></li>
+                     <li class="footer-main__item"><a class="footer-main__link" href="#">Telegram Бот</a></li>
+                  </ul>
+                  <ul class="footer-main__list footer-main__list-2">
+                     <li class="footer-main__item"><a class="footer-main__link" href="#">Публичная оферта</a></li>
+                     <li class="footer-main__item"><a class="footer-main__link" href="#">Согласие на обработку персональных данных</a></li>
+                     <li class="footer-main__item"><a class="footer-main__link" href="#">Политика конфиденциальности</a></li>
+                     <li class="footer-main__item"><a class="footer-main__link" href="#">Согласие на получение новостной и рекламной рассылки</a></li>
+                  </ul>
+               </div>
+               <div class="footer-rights">© 2025 Все права защищены</div>
+            </div>
+         </div>
+      </footer>
+   </div>
+
+   <script src="script/script.js"></script>
+</body>
+
+</html>

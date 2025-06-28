@@ -1,0 +1,8 @@
+@font-face {
+   font-family: MultiroundPro;
+   src: local("MultiroundPro"), local("MultiroundPro-Regular"),
+   url(fonts/MultiroundPro.woff2) format(woff2),
+   url(fonts/MultiroundPro.woff) format(woff),
+   url(fonts/MultiroundPro.eot) format(eot);
+   font-weight: 400;
+}

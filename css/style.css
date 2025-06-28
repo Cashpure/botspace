@@ -1,0 +1,484 @@
+body {
+  font-size: 10px;
+  font-family: MultiroundPro;
+  background-color: #121212;
+  color: white;
+  cursor: none;
+}
+
+button,
+a,
+input,
+label {
+  cursor: none;
+}
+
+h2 {
+  font-size: 3.646vw;
+}
+
+.overlay {
+  background-color: rgba(18, 18, 18, 0.8705882353);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s;
+}
+
+.overlay--active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.cursor {
+  --size: 35px;
+  position: fixed;
+  /* position: relative; */
+  z-index: 100;
+  height: var(--size);
+  width: var(--size);
+  -webkit-backdrop-filter: invert(100%);
+          backdrop-filter: invert(100%);
+  border-radius: 50%;
+  transform: translate3d(calc(100vw * var(--cursor-x) - var(--size) / 3), calc(100vh * var(--cursor-y) - var(--size) / 3), 0);
+  pointer-events: none;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+  border: 4px solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #fff;
+  border-radius: 40px;
+  box-shadow: 0 0 10px #fff;
+}
+
+.wrapper {
+  width: 100%;
+  min-height: 1000px;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 89.167vw;
+  padding: 0 0.521vw;
+  margin: 0 auto;
+}
+
+.btn {
+  background-color: transparent;
+  border: solid 1px white;
+  border-radius: 1.042vw;
+  font-size: 1.302vw;
+  color: white;
+  height: 4.063vw;
+  width: 12.5vw;
+  transition: all 0.2s;
+}
+.btn:hover {
+  color: #121212;
+  background-color: white;
+}
+.btn:active {
+  color: white;
+  background-color: transparent;
+}
+
+.header {
+  margin-top: 61px;
+}
+
+.header-top__nav-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header-top__nav-list .header-top__nav-item {
+  font-size: 1.432vw;
+  margin-right: 3.281vw;
+}
+.header-top__nav-list .header-top__nav-item:last-child {
+  margin-right: 0;
+}
+.header-top__nav-list .header-top__nav-link {
+  transition: all 0.2s;
+}
+.header-top__nav-list .header-top__nav-link:active {
+  color: black !important;
+}
+
+.header-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 38.177vw;
+}
+.header-main .header-main__img {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-47.5%);
+  z-index: -1;
+  width: 38.177vw;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.header-main .header-main__img img {
+  width: 100%;
+}
+.header-main .header-main__text-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.header-main .header-main__text-wrapper .header-main__title {
+  font-size: 11.615vw;
+  text-shadow: 0 0 10px #fff;
+}
+.header-main .header-main__text-wrapper .header-main__title span {
+  color: transparent;
+  text-shadow: none;
+  -webkit-text-stroke: 2px #fff;
+}
+.header-main .header-main__text-wrapper .header-main__text {
+  font-size: calc(0.521vw + 0.5em);
+  font-size: 0.781vw;
+  transform: translateX(-10px);
+}
+.header-main .header-main__buttons {
+  position: absolute;
+  bottom: 0;
+  transform: translateY(50%);
+}
+.header-main .header-main__buttons .header-main__sign {
+  margin-right: 12.5vw;
+}
+.header-main .form-wrapper {
+  width: 100%;
+  padding: 0 calc(7.813vw + 50px);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 11;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header-main .form-wrapper .header-main__form {
+  padding: calc(0.391vw + 15px);
+  max-width: 800px;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 2.083vw;
+  color: #121212;
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  visibility: hidden;
+  opacity: 0;
+}
+.header-main .form-wrapper .header-main__form input {
+  font-family: serif;
+  border: solid #121212 1px;
+  border-radius: 1.04vw;
+  padding: 10px 5px;
+  margin-bottom: 25px;
+  font-size: 1.5rem;
+}
+.header-main .form-wrapper .header-main__form button {
+  font-size: 20px;
+  color: #121212;
+  border-color: #121212;
+}
+.header-main .form-wrapper .header-main__form button:hover {
+  color: #fff;
+  background-color: #121212;
+}
+.header-main .form-wrapper .header-main__form button:active {
+  color: #121212;
+  background-color: #fff;
+}
+.header-main .form-wrapper .header-main__form--active {
+  visibility: visible;
+  opacity: 1;
+  display: flex !important;
+}
+.header-main .form-wrapper--active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.main {
+  margin-top: 10.052vw;
+  position: relative;
+}
+.main .main-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 11.302vw;
+}
+.main .main-info .main-info__left {
+  width: 75.125vw;
+  margin-right: auto;
+}
+.main .main-info .main-info__left .main-info__text {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  color: #939393;
+  font-size: 1.302vw;
+  line-height: 2.404vw;
+  margin-bottom: 2.76vw;
+}
+.main .main-info .main-info__left .main-info__text .main-info__text-top span:first-child {
+  font-size: 3.646vw;
+  color: white;
+}
+.main .main-info .main-info__left .main-info__left-btn {
+  width: 28.802vw;
+}
+.main .main-info .main-info__right {
+  width: 100%;
+  top: 0;
+  right: 0;
+}
+.main .main-info .main-info__right .main-info__right-img {
+  right: 0;
+  top: -15.625vw;
+  position: absolute;
+  width: 56.25vw;
+  z-index: -1;
+}
+.main .main-info .main-info__right .main-info__right-img img {
+  width: 100%;
+}
+.main .main-opportunities {
+  display: flex;
+  position: relative;
+}
+.main .main-opportunities .main-opportunities__left .main-opportunities__left-img {
+  position: absolute;
+  left: -4.4vw;
+  bottom: -1.771vw;
+  width: 48.438vw;
+}
+.main .main-opportunities .main-opportunities__left .main-opportunities__left-img img {
+  width: 100%;
+}
+.main .main-opportunities .main-opportunities__right {
+  max-width: 40.729vw;
+  margin-left: auto;
+}
+.main .main-opportunities .main-opportunities__right .main-opportunities__title {
+  margin-bottom: 2.083vw;
+}
+.main .main-opportunities .main-opportunities__right .main-opportunities__right-list .main-opportunities__right-item {
+  margin-bottom: 1vw;
+}
+.main .main-opportunities .main-opportunities__right .main-opportunities__right-list .main-opportunities__right-item .main-opportunities__right-title {
+  font-size: 1.93vw;
+}
+.main .main-opportunities .main-opportunities__right .main-opportunities__right-list .main-opportunities__right-item .main-opportunities__right-text {
+  line-height: 2.404vw;
+  color: #939393;
+  font-size: 1.302vw;
+}
+.main .main-integr {
+  margin-top: 7.396vw;
+  font-size: 1.563vw;
+  line-height: 160%;
+  margin-bottom: 2.917vw;
+}
+.main .main-integr .main-integr__title {
+  line-height: 160%;
+  text-align: center;
+  margin-bottom: 1.354vw;
+}
+.main .main-integr .main-integr__text {
+  color: #939393;
+}
+.main .main-integr .main-integr__text span {
+  color: #fff;
+}
+.main .main-astro {
+  margin-bottom: 4.167vw;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.main .main-astro .main-astro__inner {
+  height: 89.167vw;
+  min-width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main .main-astro .main-astro__inner .main-astro__char {
+  width: 41.943vw;
+}
+.main .main-astro .main-astro__inner .main-astro__char img {
+  width: 100%;
+}
+.main .main-astro .main-astro__inner .main-astro__planet-wrapper {
+  width: 19.844vw;
+  position: absolute;
+}
+.main .main-astro .main-astro__inner .main-astro__planet-wrapper:nth-child(3) {
+  width: 23.544vw;
+}
+.main .main-astro .main-astro__inner .main-astro__planet-wrapper:nth-child(6) {
+  width: 24.844vw;
+}
+.main .main-astro .main-astro__inner .main-astro__planet-wrapper:nth-child(7) {
+  width: 20.844vw;
+}
+.main .main-astro .main-astro__inner .main-astro__planet-wrapper .main-astro__planet-img {
+  position: relative;
+}
+.main .main-astro .main-astro__inner .main-astro__planet-wrapper .main-astro__planet-img img {
+  width: 100%;
+}
+.main .main-astro .main-astro__inner .main-astro__planet-wrapper .main-astro__planet-img .main-astro__planet-logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.main .main-astro .main-astro__inner .main-astro__planet-wrapper .main-astro__planet-img .main-astro__planet-logo img {
+  width: 100%;
+}
+.main .main-limit {
+  position: relative;
+  margin-bottom: 3.385vw;
+}
+.main .main-limit .main-limit__title {
+  text-align: center;
+  margin-bottom: 3.125vw;
+}
+.main .main-limit .main-limit__text {
+  font-size: 1.563vw;
+  max-width: 55.729vw;
+  margin-right: auto;
+  line-height: 160%;
+}
+.main .main-limit .main-limit__img {
+  position: absolute;
+  width: 53.385vw;
+  top: 0;
+  right: 1.719vw;
+  transform: translateY(20%);
+}
+.main .main-limit .main-limit__img img {
+  width: 100%;
+}
+
+.main-plan .main-plan__inner {
+  margin-top: 7.5vw;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 2.396vw;
+  color: #09090D;
+}
+.main-plan .main-plan__inner .main-plan__item {
+  height: 29.167vw;
+  background-color: #1c1e21;
+  border-radius: 0.417vw;
+  padding: 0 1.25vw;
+}
+.main-plan .main-plan__inner .main-plan__item:nth-child(2) {
+  color: #303235;
+  background: #555759;
+  background: linear-gradient(158deg, rgb(85, 87, 89) 0%, rgb(23, 25, 28) 100%);
+}
+.main-plan .main-plan__inner .main-plan__item:nth-child(3) {
+  color: #333030;
+  background: #625A54;
+  background: linear-gradient(158deg, rgb(98, 90, 84) 0%, rgb(23, 25, 28) 100%);
+}
+.main-plan .main-plan__inner .main-plan__item:nth-child(4) {
+  color: #221b18;
+  background: #402C20;
+  background: linear-gradient(158deg, rgb(64, 44, 32) 0%, rgb(23, 25, 28) 100%);
+}
+.main-plan .main-plan__inner .main-plan__item .main-plan__item-price {
+  margin-bottom: 0.521vw;
+  font-size: 3.688vw;
+  margin-top: 5.286vw;
+}
+.main-plan .main-plan__inner .main-plan__item .main-plan__item-text {
+  color: #fff;
+  margin-bottom: 7.161vw;
+  font-size: 1.406vw;
+}
+.main-plan .main-plan__inner .main-plan__item .main-plan__item-description {
+  color: #939393;
+  font-size: 0.833vw;
+  max-width: 17.031vw;
+}
+.main-plan .main-plan__button {
+  margin: 0 auto;
+  width: 33.073vw;
+  text-align: center;
+  margin-bottom: 4.427vw;
+  display: block;
+}
+
+.footer .footer-inner {
+  width: 100%;
+  padding: 3.021vw 3.021vw 2.188vw 1.563vw;
+  background-color: #141414;
+  border-radius: 2.5vw;
+}
+.footer .footer-inner .footer-main {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.footer .footer-inner .footer-main .footer-main__list .footer-main__item {
+  font-size: 1.302vw;
+  margin-bottom: 0.613vw;
+}
+.footer .footer-inner .footer-main .footer-main__list .footer-main__item .footer-main__link {
+  transition: all 0.2s;
+}
+.footer .footer-inner .footer-main .footer-main__logo {
+  width: 15.625vw;
+}
+.footer .footer-inner .footer-main .footer-main__logo img {
+  width: 100%;
+}
+.footer .footer-inner .footer-rights {
+  color: #D9D9D9;
+  font-size: 0.938vw;
+}/*# sourceMappingURL=style.css.map */
