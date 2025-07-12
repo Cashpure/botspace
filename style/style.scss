@@ -38,7 +38,6 @@ h2 {
 .cursor {
    --size: 35px;
    position: fixed;
-   /* position: relative; */
    z-index: 100;
    height: var(--size);
    width: var(--size);
@@ -86,7 +85,9 @@ h2 {
    font-size: 1.302vw; // 25
    color: white;
    height: 4.063vw; //78
-   width: 12.5vw; //240
+   // width: 12.5vw; //240
+   width: clamp(150px, 12.5vw, 300px);
+   min-width: 150px;
    transition: all .2s;
 
    &:hover {

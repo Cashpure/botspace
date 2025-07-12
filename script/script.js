@@ -69,15 +69,32 @@ let radius = 0;
 let centerX = 0;
 let centerY = 0;
 
-let rotationVelocity = 0;     
-let scrollDelta = 0;         
-const friction = 0.95;         
-const sensitivity = 0.0001;  
+let rotationVelocity = 0;
+let scrollDelta = 0;
+const friction = 0.95;
+const sensitivity = 0.0001;
+
+const defaultCursor = () => {
+   const isTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+   const isMobileUA = /Android|iPhone|iPad|iPod|Opera Mini|IEMobile/i.test(navigator.userAgent);
+   return isTouch || isMobileUA;
+}
+
+if (defaultCursor()) {
+   const customCursor = document.getElementById('cursor')
+   customCursor.style.display = 'block'
+}
 
 function resize() {
    radius = (astroInner.offsetWidth - planets[0].offsetWidth) / 2;
    centerX = astroInner.offsetWidth / 2;
    centerY = astroInner.offsetHeight / 2;
+   const customCursor = document.getElementById('cursor')
+   if (defaultCursor() && customCursor) {
+      customCursor.style.display = 'none'
+   } else {
+      customCursor.style.display = 'block'
+   }
 }
 resize();
 window.addEventListener('resize', resize);
@@ -158,3 +175,4 @@ class Cursor {
    }
 }
 let cursor = new Cursor();
+
